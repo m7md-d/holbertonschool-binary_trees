@@ -7,7 +7,7 @@
  *
  * Return: 1 if node is a leaf, 0 otherwise
  */
-int ـbinary_tree_is_leaf(const binary_tree_t *node)
+int _binary_tree_is_leaf(const binary_tree_t *node)
 {
 	if (!node)
 		return (0);
@@ -32,5 +32,5 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	sum += binary_tree_leaves(tree->left);
 	sum += binary_tree_leaves(tree->right);
 
-	return (sum + ـbinary_tree_is_leaf(tree));
+	return (sum + _binary_tree_is_leaf(tree));
 }
